@@ -37,9 +37,8 @@ module Openvibe
 
     def start
       dir = File.dirname(@path)
-      Dir.chdir(dir)
       command = "#{@path} #{@mode} #{@scenario} #{@options.join(' ')}"    
-      @pid = spawn(@env || {},command,:out=> @out || STDOUT )
+      @pid = spawn(@env || {},command,:out=> @out || STDOUT,:chdir => dir )
       Process.waitpid(@pid)
     end
     
