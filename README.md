@@ -8,11 +8,18 @@ A launcher for openvibe, in ruby
 
 === usage
 
-`ruby
+```ruby
+require 'openvibe-launcher'
+
+DESIGNER_PATH = "..." # path to the designer
+SCENARIO_PATH = "..." # path to the scenario
+MODE = "--play-fast" # optional
+OPTION = ["--no-gui","--no-session-management"] # optional
+
 openvibe = Openvibe::Launcher.new(DESIGNER_PATH,SCENARIO_PATH,MODE,OPTIONS)
 
 openvibe.start
-`
+```
 with MODE a string: 
 
 * `--open`, by default
