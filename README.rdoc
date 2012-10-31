@@ -1,6 +1,28 @@
 = openvibe-launcher
 
-Description goes here.
+A launcher for openvibe, in ruby
+
+=== installation
+
+`gem install openvibe-launcher`
+
+=== usage
+
+`ruby
+openvibe = Openvibe::Launcher.new(DESIGNER_PATH,SCENARIO_PATH,MODE,OPTIONS)
+
+openvibe.start
+`
+with MODE a string: 
+
+* `--open`, by default
+* `--play`
+* `--play-fast`
+
+and OPTIONS an Array containing:
+
+* `--no-gui`
+* `--no-session-management`
 
 == Contributing to openvibe-launcher
  
@@ -16,4 +38,3 @@ Description goes here.
 
 Copyright (c) 2012 Alexandre Barachant. See LICENSE.txt for
 further details.
-
