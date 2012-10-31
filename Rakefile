@@ -9,17 +9,18 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
+
 require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "openvibe-launcher"
-  gem.homepage = "http://github.com/miaoufkirsh/openvibe-launcher"
+  gem.homepage = "http://github.com/alexandrebarachant/openvibe-launcher"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "miaoufkirsh@gmail.com"
+  gem.summary = %Q{launch openvibe designer}
+  gem.description = %Q{A way to launch the openvibe designer in ruby}
+  gem.email = "alexandre.barachant@gmail.com"
   gem.authors = ["Alexandre Barachant"]
   # dependencies defined in Gemfile
 end
@@ -32,13 +33,6 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
 
 task :default => :test
 
