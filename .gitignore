@@ -3,7 +3,7 @@ coverage
 coverage.data
 
 # rdoc generated
-rdoc
+rdoc  
 
 # yard generated
 doc
@@ -11,6 +11,7 @@ doc
 
 # bundler
 .bundle
+*.lock
 
 # jeweler generated
 pkg
