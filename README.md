@@ -1,12 +1,12 @@
-= openvibe-launcher
+# openvibe-launcher
 
 A launcher for openvibe, in ruby
 
-=== installation
+### installation
 
 `gem install openvibe-launcher`
 
-=== usage
+### usage
 
 ```ruby
 require 'openvibe-launcher'
@@ -31,7 +31,7 @@ and OPTIONS an Array containing:
 * `--no-gui`
 * `--no-session-management`
 
-== Contributing to openvibe-launcher
+## Contributing to openvibe-launcher
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
@@ -41,7 +41,7 @@ and OPTIONS an Array containing:
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+## Copyright
 
 Copyright (c) 2012 Alexandre Barachant. See LICENSE.txt for
 further details.
