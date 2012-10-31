@@ -4,7 +4,9 @@ A launcher for openvibe, in ruby
 
 ### installation
 
-`gem install openvibe-launcher`
+```
+gem install openvibe-launcher
+```
 
 ### usage
 
@@ -14,7 +16,7 @@ require 'openvibe-launcher'
 DESIGNER_PATH = "..." # path to the designer
 SCENARIO_PATH = "..." # path to the scenario
 MODE = "--play-fast" # optional
-OPTION = ["--no-gui","--no-session-management"] # optional
+OPTIONS = ["--no-gui","--no-session-management"] # optional
 
 openvibe = Openvibe::Launcher.new(DESIGNER_PATH,SCENARIO_PATH,MODE,OPTIONS)
 
