@@ -23,7 +23,7 @@ module Openvibe
       if File.exists?(designer_path)
         @path = designer_path
       else
-        Error.critical("Designer script #{sc} not found")
+        Error.critical("Designer script #{designer_path} not found")
       end
       
       @options = Array.new
@@ -36,6 +36,8 @@ module Openvibe
     end
 
     def start
+      dir = File.dirname(@path)
+      Dir.chdir(dir)
       command = "#{@path} #{@mode} #{@scenario} #{@options.join(' ')}"    
       @pid = spawn(@env || {},command,:out=> @out || STDOUT )
       Process.waitpid(@pid)
