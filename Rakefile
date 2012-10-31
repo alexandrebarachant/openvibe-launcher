@@ -17,7 +17,7 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "openvibe-launcher"
   gem.homepage = "http://github.com/alexandrebarachant/openvibe-launcher"
-  gem.license = "MIT"
+  gem.license = "LGPL"
   gem.summary = %Q{launch openvibe designer}
   gem.description = %Q{A way to launch the openvibe designer in ruby}
   gem.email = "alexandre.barachant@gmail.com"
