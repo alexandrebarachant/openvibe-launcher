@@ -36,10 +36,15 @@ module Openvibe
     end
 
     def start
+      self.start!
+      Process.waitpid(@pid)
+    end
+    
+    def start!
       dir = File.dirname(@path)
       command = "#{@path} #{@mode} #{@scenario} #{@options.join(' ')}"    
       @pid = spawn(@env || {},command,:out=> @out || STDOUT,:chdir => dir )
-      Process.waitpid(@pid)
+      Process.detach(@pid)
     end
     
     def play
