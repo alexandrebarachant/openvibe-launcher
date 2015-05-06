@@ -27,7 +27,7 @@ module Openvibe
       end
       
       @options = Array.new
-      
+      @prefix = nil
       # add scenario, mode and options
       self.scenario= scenario_
       self.mode= mode_
@@ -42,7 +42,7 @@ module Openvibe
     
     def start!
       dir = File.dirname(@path)
-      command = "#{@path} #{@mode} #{@scenario} #{@options.join(' ')}"    
+      command = "#{@prefix} #{@path} #{@mode} #{@scenario} #{@options.join(' ')}"    
       @pid = spawn(@env || {},command,:out=> @out || STDOUT,:chdir => dir )
       Process.detach(@pid)
     end
@@ -63,6 +63,10 @@ module Openvibe
     
     def setOutput(str)
       @out = str
+    end
+
+    def setPrefix(str)
+      @prefix = str
     end
         
     # scenario accessor
